@@ -2,9 +2,9 @@
 
 ## tldr
 
-Basically: you have lots of different implementations and lots of similar interfaces that need to be fulfilled by them. In response you create a lower level abstraction (probably an interface) for the general functionality that your implementations have (*entirely* without regard to the higher level interfaces you *actually* want fulfilled), call this a `concreteInterface`. You then create a `Implementor` class that takes one `concreteInterface`, which could be any of the base implementations, and use subclasses of this to fulfill all the high level interfaces.
+Basically: you have lots of different implementations and lots of similar interfaces that need to be fulfilled by them. In response you create a lower level abstraction (probably an interface) for the general functionality that your implementations have (*entirely* without regard to the higher level interfaces you *actually* want fulfilled), call this a `concreteInterface`. You then create a `Implementor` class that takes one `concreteInterface`, which could be any of the base implementations, and use subclasses of *this*to fulfill all the high level interfaces. THAT is a bridge pattern.
 
-This way you can increase the number of implementations or high level interfaces without causing an explosion of subclasses. Each new high level interface is met with a single `Implementor` class, new implementations don't cause any issues. 
+This way you can increase the number of implementations or high level interfaces without causing an explosion of subclasses. Each new high level interface is met with a *single* `Implementor` class, new implementations only need to fulfill `concreteInterface`. 
 
 
 ## longer
