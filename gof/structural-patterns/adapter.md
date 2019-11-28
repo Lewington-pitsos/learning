@@ -2,7 +2,7 @@
 
 An adapter is supposed to allow system A to interact with system B, without system A having to know anything about the interface of system B. 
 
-So, for example, system B might implement interface B, but that interface might not make sense in the context of system A. To prevent interface B from polluting system A, you might create an *adapter* object C with interface C that simply wraps around system B and converts interface C calls to the appropriate calls or sequences of calls on interface B.
+So, for example, system B might implement interface B', and you might want to use system B as part of system A. But B' might not make sense in the context of system A. To prevent B' from polluting system A, you might create an *adapter* object C with interface C' makes sense in the context of system A. C simply wraps around an implementation of B' and converts C' calls to the appropriate calls or sequences of calls on B'.
 
 ## Examples
 
@@ -12,7 +12,7 @@ Working out a car's position on a roundabout requires a some complex circle-base
 
 From another project you have a `Circle` class that represents a circular space, and tracks the positions of objects inside it. This class actually contains most of what Roundabout needs to do, but it's interface has nothing to do with cars and it doesn't update itself. 
 
-This is a perfect place to use an **Adapter**. You can implement is using inheritance or composition. 
+This is a perfect place to use an **Adapter**. You can implement it using inheritance or composition. 
 
 ### Inheritance
 

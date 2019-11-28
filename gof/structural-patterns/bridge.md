@@ -36,7 +36,7 @@ public class interface LandBird : Bird {
 Let's imagine that in this the intention of `Run` is basically just to do walk 3 times, i.e. it can be expressed entirely in terms of functionality that already exists in `Bird`. 
 
 
-Ok, so `LandBird` also needs efficient and statistical implementations. The most straightforward thing to do might be to add the `Run` method to each bird implementation, or possible create a `Land` subclass for each implementation, and use these to implement `LandBird`. 
+Ok, so `LandBird` also needs efficient and statistical implementations. The most straightforward thing to do might be to add the `Run` method to each bird implementation, or possibly create a `Land` subclass for each implementation, and use these to implement `LandBird`. 
 
 Both of these ideas quickly become unsustainable though, imagine we also want an `AquaticBird` and a `WaddlingBird`, etc. That's 3 new subclasses or class extensions to write each time.
 
