@@ -56,3 +56,7 @@ The real issue is *scale*. Computers are very fast, but they often have to deal 
 Consider, for instance, a program which is centered around a scale of 1,000 (i.e. something like a field of 1,000 buckets, a very normal scale in computing). If this program has to call operation `1.` 100 times, and then operation `3.` 100 times we still have only 400 actions in total for the whole program. If we have to call operation `2` (which as we recall has an efficiency of `O(n/2)`, or `O(500)` in this case), only 10 times, we already have 5,000 actions. And if we increase the number of times we have to use operation `2.`, or the scale of the program, the number of actions quickly skyrockets. Finally, if we had to perform operation `5.` only once, we instantly end up with 1,000,000 actions.
 
 So, because computer actions are so cheap, and because computers often perform operations at great scale, computer programmers are very interested in the *scaleability* of operations when discussing their efficiency, and not particularly concerned with anything else. If an operation is scaleable, it's considered efficient.
+
+## Orders only
+
+At the end of the day, because we only care about scale, we don't really differentiate between O(1) and O(50), both are basically treated as O(1), as the critical point is simply that we have something better than O(n). 
